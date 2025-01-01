@@ -1,0 +1,90 @@
+
+
+.about-container {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(56deg, #000000 37%, rgba(2, 188, 255, 0.822) 100%);
+  color: white;
+  padding: 0; /* Ensure no padding */
+  margin: 0;
+  min-height: 100vh; /* Full height of the screen */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  padding-left: 40px; /* Push content slightly to the left */
+  padding-right: 40px; /* Prevent content from touching the right edge */
+  
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-top: 40px;
+}
+
+.navbar li {
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text-animate {
+  font-family: Arial, sans-serif;
+  font-size: 2.5rem; /* Adjust size if needed */
+  background: linear-gradient(100deg, #816060 0%, rgb(3, 200, 255) 100%);
+  -webkit-background-clip: text; /* Apply gradient to text */
+  color: transparent;
+  animation: moveUpDown 4s ease-in-out infinite; /* Animation for up, down, and fading */
+
+}
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  width: 100%;
+  flex-grow: 1; /* Ensure this section grows to fill available space */
+  padding-top: 40px;  /* Add space from the top */
+  padding-bottom: 40px; /* Add space from the bottom */
+}
+
+.intro-text {
+  margin: 0;
+  padding: 0;
+  max-width: 60%;
+  padding-left: 20px; /* Additional left padding for better alignment */
+}
+
+.intro-text h1 {
+  font-size: 3.6rem; /* Increase font size */
+}
+
+.intro-text p {
+  font-size: 2.1rem;
+  line-height: 1.6;
+}
+
+.intro-image img {
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  object-fit: cover; /* Ensure image fits inside the circle */
+}
+
+@keyframes moveUpDown {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(0); /* Start at normal position */
+  }
+  50% {
+    opacity: 1; /* Become fully visible */
+    transform: translateY(-80px); /* Move up */
+  }
+  100% {
+    opacity: 0; /* Fade out at the end */
+    transform: translateY(0); /* Return to original position */
+  }
+}
