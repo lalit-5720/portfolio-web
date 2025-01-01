@@ -1,4 +1,5 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -9,6 +10,7 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 export class AboutComponent implements OnInit {
 
   constructor() { }
+
 
   ngOnInit(): void {
   }

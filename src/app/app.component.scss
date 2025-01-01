@@ -1,13 +1,17 @@
-.position {
-    display: flex;              /* Enable Flexbox */
-    justify-content: center;    /* Horizontally center content */
-    align-items: center;        /* Vertically center content */
-    height: 100vh;              /* Ensure the container takes full height */
-    text-align: center;         /* Optional: Centers the text inside */
-}
+// .position {
+//     display: flex;              /* Enable Flexbox */
+//     justify-content: center;    /* Horizontally center content */
+//     align-items: center;        /* Vertically center content */
+//     height: 100vh;              /* Ensure the container takes full height */
+//     text-align: center;         /* Optional: Centers the text inside */
+// }
 
 // nav a {
 //     margin: 0 10px;             /* Add space between links */
 //     text-decoration: none;      /* Optional: Remove underlines from links */
 //     color: inherit;             /* Optional: Inherit color */
 // }
+
+html {
+    scroll-behavior: smooth; /* Smooth scroll for internal links */
+  }
