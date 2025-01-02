@@ -1,35 +1,79 @@
-/* navbar.component.css */
+/* Navbar container */
 .navbar {
-    background-color: black; /* Set navbar to black */
-    width: 100%; /* Ensure the navbar spans the entire width */
-    padding: 15px 0;
-    position: fixed; /* Make navbar fixed at the top */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensure navbar stays on top */
+  background-color: #000000; /* Dark background for the navbar */
+  width: 100%;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space out logo and nav links */
+  align-items: center; /* Vertically center */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for a floating effect */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Navbar logo styling */
+.navbar h2 {
+  color: rgb(4, 150, 235);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Navbar list container */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar list items */
+.navbar li {
+  margin-left: 30px; /* Space between navbar items */
+}
+
+/* Navbar links styling */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 1.3s ease; /* Smooth background color change */
+}
+
+/* Hover effect for navbar items */
+.navbar a:hover {
+  background-color: #575757;
+}
+
+/* Active link styling */
+.navbar a.active {
+  background-color: #4c16e2ec;
+}
+
+/* Add hover effect for the navbar container */
+.navbar:hover {
+  background-color: #333;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Stack navbar items on smaller screens */
+      padding: 15px;
   }
-  
+
   .navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
+      flex-direction: column; /* Stack the links vertically */
+      align-items: center; /* Center align the navbar items */
   }
-  
+
   .navbar li {
-    display: inline;
+      margin: 10px 0; /* Adjust the space between navbar items */
   }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 18px;
-  }
-  
-  .navbar a:hover {
-    background-color: #575757;
-  }
-  
+}

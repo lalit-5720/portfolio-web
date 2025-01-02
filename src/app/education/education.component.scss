@@ -1,5 +1,6 @@
 /* education.component.css */
 .education-section {
+    font-family: Arial, sans-serif;  
     width: 100%;
     min-height: 100vh;
     padding: 60px 20px; /* More padding for spacing */
@@ -39,7 +40,7 @@
 //   }
   
   .timeline-item {
-    display: flex;
+    display: fixed;
     align-items: center;
     margin-bottom: 40px;
     position: relative;

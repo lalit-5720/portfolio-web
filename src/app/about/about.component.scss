@@ -11,7 +11,7 @@
   flex-direction: column; /* Stack content vertically */
   padding-left: 40px; /* Push content slightly to the left */
   padding-right: 40px; /* Prevent content from touching the right edge */
-  
+  animation: fadeIn 2.0s ease-out;
 }
 
 
@@ -70,5 +70,16 @@
   100% {
     opacity: 0; /* Fade out at the end */
     transform: translateY(0); /* Return to original position */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
