@@ -1,0 +1,112 @@
+/* Welcome Section Styling */
+.welcome-section {
+    font-family: Arial, sans-serif;
+    background: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    position: relative; /* For positioning child elements */
+    overflow: hidden; /* Ensures video doesn't spill out */
+}
+
+/* Video Background Styling */
+.background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.8;
+}
+
+/* Welcome Content Styling */
+.welcome-content {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    animation: dissolveEffect 6s forwards;
+}
+
+/* Welcome Text Styling */
+.welcome-text {
+    margin: 0;
+}
+
+.welcome-text h2 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    background: linear-gradient(90deg, #ff4500, #ff8c00, #8b0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: dissolveEffect 6s forwards;
+}
+
+@keyframes dissolveEffect {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+    25% {
+        opacity: 0.75;
+        transform: scale(1);
+        filter: blur(1px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+        filter: blur(2px);
+    }
+    75%{
+        opacity: 0.25;
+        transform: scale(1.1);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        filter: blur(4px);
+    }
+}
+
+/* Note Text Styling */
+.note-text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.note-text h3 {
+    font-size: 1.5em;
+    color: white;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Animated Gradient Effect */
+// .welcome-text h2:before {
+//     content: '';
+//     position: absolute;
+//     left: 120%;
+//     width: 120%;
+//     height: 100%;
+//     background:  radial-gradient(circle at center, #FF4500, #FF8C00, #8B0000, #000000);
+//     animation: animate 10s linear forwards;
+// }
+
+/* Keyframes for the Gradient Animation */
+@keyframes animate {
+    0% {
+        left: 120%;
+    }
+    100% {
+        left: -20%;
+    }
+}

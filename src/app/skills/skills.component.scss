@@ -1,0 +1,164 @@
+.skill-section {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-top: 7.5%;
+    animation: fadeIn 2.0s ease-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px; /* Set a max width */
+    background: white;
+    border-radius: 10px;
+    padding: 15px 30px;
+    position: relative;
+    margin: auto;
+}
+
+.container h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.skill {
+    width: 48%;  /* Allow two items per row with some space */
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skill p{
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 70px;
+  margin-left: 0px;
+  font-size: 20px;
+  color: #000000;
+  line-height: 25px;
+  max-width: 730px;
+  opacity: 75%;
+}
+
+.skill h3 {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.skill h4 {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.circle-bar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.background {
+    stroke: #f0f0f0;
+}
+
+.fill {
+    stroke-dasharray: 440;  /* Full circumference */
+    stroke-dashoffset: 440; /* Initially hidden */
+    transform: rotate(-90deg); /* Starts from top */
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 2s ease;
+    
+}
+
+.fill.python {
+    stroke: green;
+    stroke-dashoffset: 440 - (440 * 0.95);  /* 95% of the circumference */
+    animation-delay: 0.5s;
+    animation: fillProgressPython 2s ease forwards;
+}
+
+.fill.angular {
+    stroke: green;
+    stroke-dashoffset: 440 - (440 * 0.70);  /* 80% of the circumference */
+    animation-delay: 1s;
+    animation: fillProgressAngular 2s ease forwards;
+}
+
+.fill.java {
+    stroke: green;
+    stroke-dashoffset: 440 - (440 * 0.60);  /* 60% of the circumference */
+    animation-delay: 1.5s;
+    animation: fillProgressJava 2s ease forwards;
+}
+
+.fill.sql {
+    stroke: green;
+    stroke-dashoffset: 440 - (440 * 0.80);  /* 70% for Circumference */
+    animation-delay: 2s;
+    animation: fillProgressSQL 2s ease forwards;
+}
+
+@keyframes fillProgressPython {
+    from {
+        stroke-dashoffset: 440;  /* Full circle, no progress */
+    }
+    to {
+        stroke-dashoffset: 440 - (440 * 0.95);  /* Update to 95% progress */
+    }
+}
+
+@keyframes fillProgressAngular {
+    from {
+        stroke-dashoffset: 440;  /* Full circle, no progress */
+    }
+    to {
+        stroke-dashoffset: 440 - (440 * 0.70);  /* Update to 30% progress */
+    }
+}
+
+@keyframes fillProgressJava {
+    from {
+        stroke-dashoffset: 440;  /* Full circle, no progress */
+    }
+    to {
+        stroke-dashoffset: 440 - (440 * 0.60);  /* Update to 60% progress */
+    }
+}
+
+@keyframes fillProgressSQL {
+    from {
+        stroke-dashoffset: 440;  /* Full circle, no progress */
+    }
+    to {
+        stroke-dashoffset: 440 - (440 * 0.80);  /* Update to negative 50% progress */
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
