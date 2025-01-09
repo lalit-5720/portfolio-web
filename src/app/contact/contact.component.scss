@@ -1,0 +1,123 @@
+.contact.section {
+    background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
+    color: #ffffff;
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-header {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.contact-header .email-link {
+    color: rgba(2, 188, 255, 0.9);
+    text-decoration: none;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.contact-header .email-link:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 40px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Center-align items */
+    gap: 20px; /* Add spacing between form elements */
+}
+
+.form-group h2 {
+    color: #1c1c1c;
+    text-align: center;
+    margin-bottom: 30px; /* Adjusted spacing */
+}
+
+.form-group {
+    width: 100%; /* Make form-group take full width of form */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Ensure inputs take full width of the form group */
+    padding: 12px; /* Adjust padding for larger input size */
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgba(2, 188, 255, 0.9);
+    outline: none;
+    box-shadow: 0 0 4px rgba(2, 188, 255, 0.6);
+}
+
+textarea {
+    resize: none;
+    height: 120px; /* Maintain proper textarea size */
+}
+
+.send-button {
+    background: rgba(2, 188, 255, 0.9);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px; /* Larger button padding */
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%; /* Full-width button */
+}
+
+.send-button:hover {
+    background: rgba(2, 188, 255, 0.7);
+}
+
+.send-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}

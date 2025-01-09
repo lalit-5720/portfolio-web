@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -9,14 +10,29 @@ import { Router } from '@angular/router';
 })
 export class WelcomeComponent implements OnInit,AfterViewInit {
 
-  constructor(private router: Router) { }
+  Dataform={
+    fullName:''
+  }
+
+  constructor(private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
+  }
 
-    // setTimeout(() => {
-    //   this.router.navigate(['/about']);
-    // }, 8000);  // 6000ms = 6 seconds
-
+  onSubmit(form:any):void{
+    if(form.valid) {
+      this.http.post('http://127.0.0.1:5000/api/name-submit', this.Dataform).subscribe({
+        next: (response) => {
+          console.log('Form submitted successfully!', response);
+          alert('Redirecting to the Next Page');
+          this.router.navigate(['/about']);
+        },
+        error: (error) => {
+          console.error('Error submitting form', error);
+          alert('Error Occured on submition');
+        }
+      });
+    }
   }
 
   ngAfterViewInit(): void {

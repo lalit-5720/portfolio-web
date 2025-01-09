@@ -1,0 +1,49 @@
+<div class="contact section">
+    <div class="header">
+        <!-- Include Navbar Component -->
+        <app-navbar></app-navbar>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Let's chat.</h1>
+            <p>Tell me about your project.</p>
+            <p>Let's create something together ✌️</p>
+            <p>
+                <a href="mailto:lalitchandran2004&#64;gmail.com" class="email-link">
+                    <i class="fas fa-envelope"></i> Mail me at lalitchandran2004&#64;gmail.com
+                </a>
+            </p>
+        </div>
+        <div class="contact-form">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="form-group">
+                    <h2>Send us a Message 🚀</h2>
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control"
+                        [(ngModel)]="formData.fullName" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" class="form-control" [(ngModel)]="formData.email"
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone No.*</label>
+                    <input type="text" id="phone" name="phone" class="form-control" [(ngModel)]="formData.phone" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">Pincode*</label>
+                    <input type="text" id="pincode" name="pincode" class="form-control"
+                        [(ngModel)]="formData.pincode" />
+                </div>
+
+                <button type="submit" class="send-button">Send message </button>
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,15 +1,21 @@
 <div class="welcome-section">
-    <video autoplay muted loop class="background-video"  preload="auto">
-        <source src="assets/videos/Fire.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    <div class="welcome-content">
-      <div class="welcome-text">
-        <h2>WELCOME</h2>
-      </div>
-      <div class="note-text">
-        <h3>Thanks for Vsiting this website. You will be redirected to About Page.</h3>
-      </div>
+  <video autoplay muted loop class="background-video" preload="auto">
+    <source src="assets/videos/Fire.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="welcome-content">
+    <div class="welcome-text">
+      <h2>WELCOME</h2>
     </div>
+    <div class="note-text">
+      <h3>Thanks for Visiting this website. You will be redirected to About Page.</h3>
+    </div>
+    <form (ngSubmit)="onSubmit(NameForm)" #NameForm="ngForm">
+    <div class="Textfield">
+      <label for="fullName" style="font-size: 1.9rem; color: white;">Name*</label>
+      <input type="text" id="fullName" name="fullName" class="form-control" [(ngModel)]="Dataform.fullName" required />
+      <button type="submit" class="send-button">Submit</button>
+    </div>
+  </form>
   </div>
-  
+</div>
