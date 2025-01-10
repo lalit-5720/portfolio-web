@@ -1,49 +1,46 @@
-
-
-.about-container {
+.about-container { 
   font-family: Arial, sans-serif;
   background: linear-gradient(56deg, #000000 37%, rgba(2, 188, 255, 0.822) 100%);
   color: white;
-  padding: 0; /* Ensure no padding */
+  padding: 0;
   margin: 0;
-  min-height: 100vh; /* Full height of the screen */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  padding-left: 40px; /* Push content slightly to the left */
-  padding-right: 40px; /* Prevent content from touching the right edge */
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
   animation: fadeIn 1.0s ease-out;
 }
 
-
 .text-animate {
   font-family: Arial, sans-serif;
-  font-size: 2.5rem; /* Adjust size if needed */
+  font-size: 2.5rem;
   background: linear-gradient(100deg, #816060 0%, rgb(3, 200, 255) 100%);
-  -webkit-background-clip: text; /* Apply gradient to text */
+  -webkit-background-clip: text;
   color: transparent;
-  animation: moveUpDown 4s ease-in-out infinite; /* Animation for up, down, and fading */
-
+  animation: moveUpDown 4s ease-in-out infinite;
 }
+
 .intro-section {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
   width: 100%;
-  flex-grow: 1; /* Ensure this section grows to fill available space */
-  padding-top: 40px;  /* Add space from the top */
-  padding-bottom: 40px; /* Add space from the bottom */
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .intro-text {
   margin: 0;
   padding: 0;
   max-width: 60%;
-  padding-left: 20px; /* Additional left padding for better alignment */
+  padding-left: 20px;
 }
 
 .intro-text h1 {
-  font-size: 3.6rem; /* Increase font size */
+  font-size: 3.6rem;
 }
 
 .intro-text p {
@@ -53,23 +50,23 @@
 
 .intro-image img {
   border-radius: 50%;
-  width: 700px;
-  height: 700px;
-  object-fit: cover; /* Ensure image fits inside the circle */
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
 }
 
 @keyframes moveUpDown {
   0% {
-    opacity: 0; /* Start invisible */
-    transform: translateY(0); /* Start at normal position */
+    opacity: 0;
+    transform: translateY(0);
   }
   50% {
-    opacity: 1; /* Become fully visible */
-    transform: translateY(-80px); /* Move up */
+    opacity: 1;
+    transform: translateY(-80px);
   }
   100% {
-    opacity: 0; /* Fade out at the end */
-    transform: translateY(0); /* Return to original position */
+    opacity: 0;
+    transform: translateY(0);
   }
 }
 
@@ -81,5 +78,99 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .intro-text {
+    max-width: 70%;
+  }
+
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .intro-text p {
+    font-size: 1.8rem;
+  }
+
+  .intro-image img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 5%;
+  }
+
+
+  .intro-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text-animate {
+    font-size: 1.8rem; /* Reduce font size for mobile view */
+    line-height: 1.2; /* Adjust line height to prevent overlapping */
+    margin-top: 10px; /* Add spacing between elements */
+    animation: moveUpDown 4s ease-in-out infinite;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem; /* Adjust main heading size */
+    text-align: center; /* Center align the heading */
+  }
+
+  .intro-text p {
+    font-size: 1.4rem; /* Reduce paragraph font size */
+    line-height: 1.5; /* Maintain readable spacing */
+    text-align: justify; /* Align text for better readability */
+    padding: 0 10px; /* Add padding to ensure spacing */
+  }
+
+  .intro-section {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align all content */
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.4rem;
+  }
+
+  .intro-image img {
+    width: 200px;
+    height: 200px;
   }
 }

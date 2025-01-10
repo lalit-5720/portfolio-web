@@ -1,13 +1,19 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Welcome Section Styling */
 .welcome-section {
     font-family: Arial, sans-serif;
     background: black;
     text-align: center;
-    margin: 0;
-    padding: 0;
     height: 100vh; /* Full viewport height */
     position: relative; /* For positioning child elements */
     overflow: hidden; /* Ensures video doesn't spill out */
+    padding: 20px; /* Added padding for mobile compatibility */
 }
 
 /* Video Background Styling */
@@ -29,70 +35,62 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 20px;
 }
 
 /* Welcome Text Styling */
 .welcome-text {
-    margin: 0;
+    margin-bottom: 20px; /* Added spacing below the text */
 }
 
 .welcome-text h2 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    position: relative;
     background: linear-gradient(90deg, #ff4500, #ff8c00, #8b0000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: blinkEffect 3s infinite,glitchEffect 1s infinite;
+    animation: blinkEffect 3s infinite, glitchEffect 1s infinite;
+    text-align: center; /* Center text */
 }
 
+/* Text Field Styling */
 .Textfield {
-    width: 50%; /* Adjust the width */
-    max-width: 500px; /* Set maximum width */
+    width: 90%; /* Full width on mobile */
+    max-width: 500px; /* Set maximum width for larger devices */
     margin: 20px auto; /* Center the form horizontally */
-    display: flex; /* Align items in a row */
-    flex-direction: row; /* Keep input and button on the same line */
-    justify-content: space-between; /* Add space between elements */
-    align-items: center; /* Vertically center items */
-    background: rgba(255, 255, 255, 0.1); /* Add a semi-transparent background */
-    padding: 10px; /* Add padding for better spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically for mobile */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .Textfield input {
-    flex: 2; /* Input takes up more space */
-    margin-right: 10px; /* Add space between input and button */
+    width: 100%; /* Full width input */
+    margin-bottom: 10px;
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.6); /* Border color */
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2); /* Transparent background */
-    color: white; /* Text color */
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
     font-size: 1rem;
     outline: none;
 }
 
-.Textfield label {
-    flex: 1; /* Ensure label has its own space */
-    margin-right: 5px; /* Add spacing between label and input */
-    font-size: 5rem; /* Adjust label font size */
-    color: white; /* Make label text white */
-    text-align: center; /* Align label text to the left */
-}
-
 .Textfield input::placeholder {
-    color: rgba(255, 255, 255, 0.6); /* Placeholder color */
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .Textfield input:focus {
-    border-color: rgba(2, 188, 255, 0.9); /* Highlight border on focus */
-    box-shadow: 0 0 5px rgba(2, 188, 255, 0.7); /* Glow effect on focus */
+    border-color: rgba(2, 188, 255, 0.9);
+    box-shadow: 0 0 5px rgba(2, 188, 255, 0.7);
 }
 
 .send-button {
-    flex: 1; /* Button takes up less space */
+    width: 100%;
     padding: 12px;
     background: rgba(2, 188, 255, 0.9);
     color: white;
@@ -102,25 +100,58 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    text-transform: uppercase; /* Capitalize button text */
-    text-align: center;
+    text-transform: uppercase;
 }
 
 .send-button:hover {
-    background: rgba(2, 188, 255, 0.7); /* Slightly darker on hover */
-    transform: scale(1.05); /* Hover animation */
+    background: rgba(2, 188, 255, 0.7);
+    transform: scale(1.05);
 }
 
+/* Note Text Styling */
+.note-text {
+    margin-top: 20px;
+    text-align: center;
+}
 
-/* Add some spacing above and below the label */
-.Textfield label {
+.note-text h3 {
+    font-size: 1.5em;
     color: white;
-    font-size: 1rem;
-    margin-bottom: 5px;
+    line-height: 1.5;
+    margin: 0;
+    animation: fadeInOut 3s infinite;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-text h2 {
+        font-size: 2em; /* Smaller text for mobile */
+    }
+    .Textfield {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+    .Textfield input {
+        font-size: 0.9rem; /* Smaller font for mobile */
+    }
+    .send-button {
+        font-size: 0.9rem; /* Adjusted button size for mobile */
+    }
+}
+
+/* Fade In/Out Effect */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+/* Glitch and Blink Effects */
 @keyframes glitchEffect {
     0% {
-        text-shadow: white
+        text-shadow: white;
     }
     10% {
         text-shadow: white;
@@ -138,40 +169,14 @@
 
 @keyframes blinkEffect {
     0%, 100% {
-      opacity: 1; /* Fully visible */
-      text-shadow: 
-      0 0 20px rgba(255, 69, 0, 0.9),  /* Fiery orange */
-      0 0 40px rgba(255, 140, 0, 0.8), /* Golden orange */
-      0 0 60px rgba(139, 0, 0, 0.7);   /* Deep red */
-    }
-    50% {
-      opacity: 0; /* Fully invisible */
-      text-shadow: none;
-    }
-  }
-  
-
-
-/* Note Text Styling */
-.note-text {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.note-text h3 {
-    font-size: 1.5em;
-    color: white;
-    line-height: 1.5;
-    margin: 0;
-    animation: fadeInOut 3s infinite;
-}
-
-/* Fade In/Out Effect */
-@keyframes fadeInOut {
-    0%, 100% {
         opacity: 1;
+        text-shadow: 
+            0 0 20px rgba(255, 69, 0, 0.9),
+            0 0 40px rgba(255, 140, 0, 0.8),
+            0 0 60px rgba(139, 0, 0, 0.7);
     }
     50% {
-        opacity: 0.2;
+        opacity: 0;
+        text-shadow: none;
     }
 }

@@ -1,10 +1,10 @@
-<nav class="navbar">
+<div class="navbar">
   <h2>Portfolio</h2>
-    <ul>
-      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a routerLink="/education" routerLinkActive="active">Education</a></li>
-      <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-    </ul>
-  </nav>
-  
+  <button class="hamburger" (click)="toggleSidebar()">&#9776;</button>
+</div>
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+  <a routerLink="/about" routerLinkActive="active" (click)="closeSidebar()">About</a>
+  <a routerLink="/education" routerLinkActive="active" (click)="closeSidebar()">Education</a>
+  <a routerLink="/skills" routerLinkActive="active" (click)="closeSidebar()">Skills</a>
+  <a routerLink="/contact" routerLinkActive="active" (click)="closeSidebar()">Contact</a>
+</div>

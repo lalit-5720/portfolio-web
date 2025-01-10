@@ -51,22 +51,22 @@
     max-width: 800px;
     background: #ffffff;
     border-radius: 8px;
-    padding: 40px; /* Increased padding for better spacing */
+    padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: left; /* Center-align items */
-    gap: 20px; /* Add spacing between form elements */
+    align-items: left;
+    gap: 20px;
 }
 
 .form-group h2 {
     color: #1c1c1c;
     text-align: center;
-    margin-bottom: 30px; /* Adjusted spacing */
+    margin-bottom: 30px;
 }
 
 .form-group {
-    width: 100%; /* Make form-group take full width of form */
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -80,8 +80,8 @@
 
 .form-group input,
 .form-group textarea {
-    width: 100%; /* Ensure inputs take full width of the form group */
-    padding: 12px; /* Adjust padding for larger input size */
+    width: 100%;
+    padding: 12px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 1rem;
@@ -97,7 +97,7 @@
 
 textarea {
     resize: none;
-    height: 120px; /* Maintain proper textarea size */
+    height: 120px;
 }
 
 .send-button {
@@ -105,12 +105,12 @@ textarea {
     color: #ffffff;
     border: none;
     border-radius: 5px;
-    padding: 15px 25px; /* Larger button padding */
-    font-size: 1.1rem; /* Slightly larger text */
+    padding: 15px 25px;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 100%; /* Full-width button */
+    width: 100%;
 }
 
 .send-button:hover {
@@ -120,4 +120,60 @@ textarea {
 .send-button:disabled {
     background: #cccccc;
     cursor: not-allowed;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .contact.section {
+        padding: 30px;
+        display: block;
+        max-height: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    .contact-header {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        padding: 20px;
+        margin-top: 5%;
+        width: 60%;
+    }
+    
+
+    .form-group h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .send-button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
 }

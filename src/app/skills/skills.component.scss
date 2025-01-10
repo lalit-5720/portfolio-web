@@ -6,18 +6,20 @@
     background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
     border-radius: 8px;
     box-sizing: border-box;
-    padding-top: 7.5%;
+    padding-top: 4%;
     animation: fadeIn 0.7s ease-out;
 }
 
 .container {
     width: 100%;
     max-width: 1100px; /* Set a max width */
+    max-height: 950px;
     background: white;
     border-radius: 10px;
     padding: 15px 30px;
     position: relative;
     margin: auto;
+    
 }
 
 .container h1 {
@@ -44,7 +46,7 @@
   margin-right: 0px;
   margin-bottom: 70px;
   margin-left: 0px;
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   line-height: 25px;
   max-width: 730px;
@@ -162,3 +164,60 @@ circle {
       transform: translateY(0);
     }
   }
+
+@media (max-width: 768px) {
+    .skill-section {
+        padding: 20px 10px; /* Reduced padding for smaller screens */
+        padding-top: 5%; /* Adjust spacing */
+        margin-top: 5%;
+    }
+
+    .container {
+        max-width: 100%; /* Full width for mobile */
+        padding: 15px; /* Adjusted padding for compact layout */
+    }
+
+    .container h1 {
+        font-size: 1.2rem; /* Reduced font size for title */
+        margin-bottom: 15px; /* Smaller margin below the title */
+        text-align: center; /* Center align title */
+    }
+
+    .skills-row {
+        display: flex; /* Enable flex layout */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-between; /* Distribute items with space between */
+        gap: 10px; /* Add spacing between rows */
+    }
+
+    .skill {
+        width: 48%; /* Allow two items per row with equal width */
+        margin-bottom: 15px; /* Space between rows */
+        text-align: center; /* Center alignment for skill text */
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        align-items: center; /* Center align items horizontally */
+        gap: 5px; /* Reduced gap for compact layout */
+    }
+
+    .skill h3 {
+        font-size: 1rem; /* Slightly reduced size for titles */
+        // margin: 0; /* Remove additional margins */
+        text-align: center; /* Ensure proper alignment */
+    }
+
+    .circle-bar {
+        display: flex; /* Ensure alignment */
+        justify-content: center; /* Horizontally center the circle */
+        align-items: center; /* Vertically center the circle */
+        width: 120px; /* Adjusted size for the circle */
+        height: 120px; /* Adjusted size for the circle */
+        margin: 10px auto; /* Add space between the heading and the bar */
+    }
+
+    .skill p {
+        font-size: 14px; /* Smaller font size for readability */
+        line-height: 18px; /* Adjusted line height */
+        margin-top: 5%; /* Add spacing above text */
+    }
+}
