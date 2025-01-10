@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://portfolio-flask-ryvl.onrender.com/api'
+  apiUrl: 'https://portfolio-flask-188a.onrender.com/api'
 };
 
 /*
