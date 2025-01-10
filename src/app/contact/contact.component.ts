@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  private baseUrl = environment.apiUrl;
 
   formData = {
     fullName: '',
@@ -19,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit(form: any): void {
     if (form.valid) {
-      this.http.post('http://127.0.0.1:5000/api/submit', this.formData).subscribe({
+      this.http.post(`${this.baseUrl}/submit`, this.formData).subscribe({
         next: (response) => {
           console.log('Form submitted successfully!', response);
           alert('Form submitted successfully!');

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-welcome',
@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit,AfterViewInit {
+
+  private baseUrl = environment.apiUrl;
 
   Dataform={
     fullName:''
@@ -21,7 +23,7 @@ export class WelcomeComponent implements OnInit,AfterViewInit {
 
   onSubmit(form:any):void{
     if(form.valid) {
-      this.http.post('http://127.0.0.1:5000/api/name-submit', this.Dataform).subscribe({
+      this.http.post(`${this.baseUrl}/name-submit`, this.Dataform).subscribe({
         next: (response) => {
           console.log('Form submitted successfully!', response);
           alert('Redirecting to the Next Page');
