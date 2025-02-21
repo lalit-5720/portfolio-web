@@ -1,111 +1,134 @@
-/* education.component.css */
+/* Main Section */
 .education-section {
-    font-family: Arial, sans-serif;  
-    width: 100%;
-    min-height: 100vh;
-    padding: 60px 20px; /* More padding for spacing */
-    background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%); /* Darker background gradient */
-    border-radius: 8px;
-    box-sizing: border-box;
-    // margin-top: 100px; /* Adjust for fixed navbar height */
-    padding-top: 7.5%;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title */
+.education-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.education-description {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Timeline Vertical Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  background-color: #00b8ff;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: right;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Align Left & Right */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* Timeline Dots */
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #00b8ff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.5);
+}
+
+/* Timeline Date */
+.timeline-date {
+  font-weight: bold;
+  color: #00b8ff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 80%;
+  transform: scale(1);
+}
+
+/* Hover Effect */
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Scroll Animation (Initially Hidden, Becomes Visible) */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+      left: 20px;
   }
-  
-  .education-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #fff;
-    font-family: 'Roboto', sans-serif; /* Modern font */
-  }
-  
-  .timeline {
-    list-style-type: none;
-    padding: 0;
-    position:relative;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-//   .timeline::before {
-//     content: '';
-//     position: absolute;
-//     left: 50%;
-//     top: 0;
-//     width: 2px;
-//     height: 100%;
-//     background-color: #00b8ff; /* Blue line */
-//     transform: translateX(-50%);
-//   }
-  
   .timeline-item {
-    display: fixed;
-    align-items: center;
-    margin-bottom: 40px;
-    position: relative;
-    width: 100%;
-    animation: fadeIn 2.0s ease-out; /* Animation for timeline items */
+      width: 100%;
+      padding-left: 40px;
+      text-align: left;
+      align-items: flex-start;
   }
-  
-  .timeline-item .timeline-date {
-    width: 150px;
-    font-weight: bold;
-    color: #00b8ff;
-    margin-right: 40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+  .timeline-item.right {
+      left: 0;
   }
-  
-  .timeline-item .timeline-content {
-    flex-grow: 1;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .timeline-item .timeline-content:hover {
-    transform: scale(1.1); /* Hover effect to enlarge */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow on hover */
-  }
-  
-  .timeline-item h3 {
-    margin: 0;
-    font-size: 22px;
-    color: #343a40;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .timeline-item p {
-    font-size: 16px;
-    color: #6c757d;
-    line-height: 1.6;
-  }
-  
-  /* Dot for each timeline item */
-//   .timeline-item::before {
-//     content: "";
-//     position: absolute;
-//     left: 50%;
-//     top: 0;
-//     width: 15px;
-//     height: 15px;
-//     background-color: #00b8ff;
-//     border-radius: 50%;
-//     transform: translateX(-50%);
-    
-//   }
-  
-  /* Animation for timeline items */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

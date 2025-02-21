@@ -4,10 +4,11 @@
     min-height: 100vh;
     padding: 60px 20px;
     background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
-    border-radius: 8px;
     box-sizing: border-box;
     padding-top: 4%;
     animation: fadeIn 0.7s ease-out;
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 .container {

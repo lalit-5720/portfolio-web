@@ -1,4 +1,4 @@
-.contact.section {
+.contact-section {
     background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
     color: #ffffff;
     padding: 50px;
@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 .contact-container {
