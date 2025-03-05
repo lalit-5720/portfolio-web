@@ -30,7 +30,7 @@ export class WelcomeComponent implements AfterViewInit, OnDestroy {
 
   // Initialize IntersectionObserver
   private initObserver(): void {
-    const sections = document.querySelectorAll('.home-section, .about-container, .education-section, .skill-section, .contact-container');
+    const sections = document.querySelectorAll('.home-section, .about-container, .timeline-container, .skills-projects-section, .contact-container');
 
     this.observer = new IntersectionObserver(
       (entries) => {

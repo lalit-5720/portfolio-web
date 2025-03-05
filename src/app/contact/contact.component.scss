@@ -1,5 +1,5 @@
 .contact-section {
-    background: linear-gradient(56deg, #1c1c1c 37%, rgba(2, 188, 255, 0.822) 100%);
+    background: black;
     color: #ffffff;
     padding: 50px;
     font-family: 'Arial', sans-serif;
@@ -8,7 +8,6 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
 }
 
 .contact-container {
@@ -29,6 +28,7 @@
 .contact-header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
+    color: #faab02;
 }
 
 .contact-header p {
@@ -37,7 +37,7 @@
 }
 
 .contact-header .email-link {
-    color: rgba(2, 188, 255, 0.9);
+    color: #faab02;
     text-decoration: none;
     font-size: 1rem;
     display: inline-block;
@@ -51,7 +51,7 @@
 .contact-form {
     flex: 1;
     max-width: 800px;
-    background: #ffffff;
+    background: black;
     border-radius: 8px;
     padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -62,7 +62,7 @@
 }
 
 .form-group h2 {
-    color: #1c1c1c;
+    color: #faab02;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -76,7 +76,7 @@
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #333333;
+    color: #faab02;
     font-size: 1rem;
 }
 
@@ -92,9 +92,9 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: rgba(2, 188, 255, 0.9);
+    border-color: #faab02;
     outline: none;
-    box-shadow: 0 0 4px rgba(2, 188, 255, 0.6);
+    box-shadow: #faab02;
 }
 
 textarea {
@@ -103,7 +103,7 @@ textarea {
 }
 
 .send-button {
-    background: rgba(2, 188, 255, 0.9);
+    background: #faab02;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -116,7 +116,7 @@ textarea {
 }
 
 .send-button:hover {
-    background: rgba(2, 188, 255, 0.7);
+    background: #c26802;
 }
 
 .send-button:disabled {
