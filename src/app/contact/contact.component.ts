@@ -13,8 +13,8 @@ export class ContactComponent implements OnInit {
   formData = {
     fullName: '',
     email: '',
-    phone: '',
-    pincode: ''
+    subject: '',
+    message: ''
   };
 
   constructor(private http: HttpClient) { }
